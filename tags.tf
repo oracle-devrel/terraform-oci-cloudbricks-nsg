@@ -12,7 +12,7 @@ resource "oci_identity_tag_namespace" "devrel" {
   provider       = oci.home
   compartment_id = local.nw_compartment_id
   description    = "Developer Relations Tag Namespace"
-  name           = "DevRel\\terraform-oci-cloudbricks-nsg${random_id.tag.hex}"
+  name           = "DevRel\\terraform-oci-cloudbricks-nsg-${random_id.tag.hex}"
 
   lifecycle {
     ignore_changes = [defined_tags["Oracle-Tags.CreatedBy"], defined_tags["Oracle-Tags.CreatedOn"]]
